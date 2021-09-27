@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 
 import Home from './components/home'
+import Connector from './components/connector'
 import Sidebar from './components/sidebar'
 import Header from './components/header'
 import { useState } from "react";
@@ -29,8 +30,11 @@ function App() {
                 <Route path="/users">
                   <Users />
                 </Route> */}
-                <Route path="/">
+                <Route path="/" exact>
                   <Home />
+                </Route>
+                <Route path="/connector/example" exact>
+                  <Connector />
                 </Route>
               </Switch>
           </div>
